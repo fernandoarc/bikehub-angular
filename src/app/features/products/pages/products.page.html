@@ -1,0 +1,26 @@
+<h2 class="page-title">Products</h2>
+
+<ng-container *ngIf="vm$ | async as vm">
+  <p *ngIf="vm.status === 'loading'">Loading...</p>
+  <p *ngIf="vm.status === 'error'">{{ vm.message }}</p>
+
+  <div *ngIf="vm.status === 'ok'" class="card">
+    <table class="table">
+      <thead>
+        <tr>
+          <th style="width: 80px">Id</th>
+          <th>Title</th>
+          <th style="width: 120px; text-align: right">Price</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let p of vm.products">
+          <td>{{ p.id }}</td>
+          <td>{{ p.title }}</td>
+          <td style="text-align: right">{{ p.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</ng-container>
