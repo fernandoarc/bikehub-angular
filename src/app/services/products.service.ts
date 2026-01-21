@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { Observable, skip } from 'rxjs';
 
 import { environment } from '../../environments/environment';
 
@@ -26,5 +26,11 @@ export class ProductsService {
 
   getProducts(limit = 10, skip = 0): Observable<ProductsResponse> {
     return this.http.get<ProductsResponse>(`${this.baseUrl}/products?limit=${limit}&skip=${skip}`);
+  }
+
+  searchProducts(q: string, limit = 10, skip = 0) {
+    return this.http.get<ProductsResponse>(
+      `${this.baseUrl}/products/search?q=${encodeURIComponent(q)}&limit=${limit}&skip=${skip}`,
+    );
   }
 }

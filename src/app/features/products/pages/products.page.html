@@ -1,5 +1,23 @@
 <h2 class="page-title">Products</h2>
 
+<form class="toolbar" [formGroup]="form" (ngSubmit)="apply()">
+  <input class="input" type="text" placeholder="Search products..." formControlName="q" />
+
+  <label class="label">
+    Limit
+    <input class="input small" type="number" formControlName="limit" />
+  </label>
+
+  <label class="label">
+    Skip
+    <input class="input small" type="number" formControlName="skip" />
+  </label>
+
+  <button class="btn" type="submit" [disabled]="form.invalid">Apply</button>
+</form>
+
+<p class="hint" *ngIf="form.controls.q.errors?.['maxlength']">Max 30 characters.</p>
+
 <ng-container *ngIf="vm$ | async as vm">
   <p *ngIf="vm.status === 'loading'">Loading...</p>
   <p *ngIf="vm.status === 'error'">{{ vm.message }}</p>
