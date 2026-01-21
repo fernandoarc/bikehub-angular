@@ -4,10 +4,10 @@ This guide describes how to run the project locally in a clean environment.
 
 ## Prerequisites
 
-* Node.js 22 (recommended via `nvm`)
-* npm (comes with Node)
-* Angular CLI 21.x
-* Git + SSH configured for GitHub (optional for running, required for pushing)
+- Node.js 22 (recommended via `nvm`)
+- npm (comes with Node)
+- Angular CLI 21.x
+- Git + SSH configured for GitHub (optional for running, required for pushing)
 
 ## Verify versions
 
@@ -19,8 +19,8 @@ ng version
 
 Expected:
 
-* Node `v22.x`
-* Angular CLI `21.x`
+- Node `v22.x`
+- Angular CLI `21.x`
 
 ## Install dependencies
 
@@ -38,7 +38,7 @@ ng serve
 
 Open:
 
-* `http://localhost:4200`
+- `http://localhost:4200`
 
 ## Formatting (Prettier)
 
@@ -56,12 +56,13 @@ npm run format:write
 
 ## Troubleshooting
 
-* If `ng` is not found, reinstall Angular CLI:
+- If `ng` is not found, reinstall Angular CLI:
 
   ```bash
   npm i -g @angular/cli@21
   ```
-* If dependencies look corrupted:
+
+- If dependencies look corrupted:
 
   ```bash
   rm -rf node_modules package-lock.json

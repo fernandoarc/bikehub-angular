@@ -25,8 +25,6 @@ export class ProductsService {
   constructor(private readonly http: HttpClient) {}
 
   getProducts(limit = 10, skip = 0): Observable<ProductsResponse> {
-    return this.http.get<ProductsResponse>(
-      `${this.baseUrl}/products?limit=${limit}&skip=${skip}`,
-    );
+    return this.http.get<ProductsResponse>(`${this.baseUrl}/products?limit=${limit}&skip=${skip}`);
   }
 }

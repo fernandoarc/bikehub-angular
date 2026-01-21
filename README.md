@@ -4,28 +4,28 @@ Angular SPA built as an intensive learning lab to strengthen Angular fundamental
 
 ## Stack
 
-* Angular CLI 21.1.0 / Angular 21
-* Node 22 (via nvm)
-* Prettier + ESLint
-* VS Code (Ubuntu/macOS friendly)
+- Angular CLI 21.1.0 / Angular 21
+- Node 22 (via nvm)
+- Prettier + ESLint
+- VS Code (Ubuntu/macOS friendly)
 
 ## API (DummyJSON)
 
 This project will use DummyJSON as a public API to simulate:
 
-* Auth (token-based flows)
-* CRUD resources (e.g., products/users/carts)
-* Search + pagination
+- Auth (token-based flows)
+- CRUD resources (e.g., products/users/carts)
+- Search + pagination
 
 Docs and endpoints used by the app will be tracked under `docs/`.
 
 ## Conventions
 
-* Branches: `feature/BKH-XXX-short-description`
-* Commits: `type(BKH-XXX): short message`
+- Branches: `feature/BKH-XXX-short-description`
+- Commits: `type(BKH-XXX): short message`
+  - Common types: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `build`
 
-  * Common types: `feat`, `fix`, `docs`, `chore`, `refactor`, `test`, `build`
-* `main` must remain buildable and runnable at all times.
+- `main` must remain buildable and runnable at all times.
 
 ---
 
